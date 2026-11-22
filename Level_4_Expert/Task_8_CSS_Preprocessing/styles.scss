@@ -1,0 +1,32 @@
+// 1. Variables
+$primary-color: blue;
+$background-color: lightyellow;
+$font-size: 18px;
+$heading-size: 36px;
+
+// 2. Nested styles
+.container {
+    background-color: $background-color;
+
+    h1 {
+        color: $primary-color;
+        font-size: $heading-size;
+    }
+
+    p {
+        color: green;
+        font-size: $font-size;
+    }
+}
+
+// 3. Mixin with parameter
+@mixin button-style($bg-color) {
+    background-color: $bg-color;
+    color: white;
+    padding: 10px;
+}
+
+// 4. Include mixin
+button {
+    @include button-style(purple);
+}
